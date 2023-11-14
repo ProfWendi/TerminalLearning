@@ -34,7 +34,7 @@ http.createServer((req, res) => {
         console.log(`year: ${year}`);
 
         res.statusCode = 200; 
-        res.write(`<h1>Chinese Year<h1><p>${year} is year of the ${animal}</p>`);
+        res.write(`<h1>Chinese Year</h1><p>${year} is year of the ${animal}</p>`);
         res.end();
 
     } else {  // all other requests will load index.html
