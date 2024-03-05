@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Circles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>More EJS Examples</h1>
+    </header>
+   
+    <main>
+    <p>
+      <% min = parseInt(min);
+      max = parseInt(max);
+      num = parseInt(num);
+      for (let i = 1; i <= num; i++) {
+        let n = Math.floor(Math.random() * (max - min + 1) + min); %>
+        <%=n%>
+      <%}%>
+      </p>
+    </main>
+    <footer>
+      <address>&copy; 2023 Wendi Jollymore</address>
+    </footer>
+  </body>
+</html>

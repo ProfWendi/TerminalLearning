@@ -1,0 +1,17 @@
+[
+    {
+        "path": "/",
+        "file": "index.html",
+        "text": "Main Page"
+    }, 
+    {
+        "path": "/gallery",
+        "file": "gallery.html",
+        "text": "Contact Us"
+    },
+    {
+        "path": "/help",
+        "file": "help.html",
+        "text": "Help and Support"
+    }    
+]

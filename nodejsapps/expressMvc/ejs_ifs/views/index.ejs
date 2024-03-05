@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Circles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>More EJS Examples</h1>
+    </header>
+   
+    <main>
+      <% if (user && rating) { 
+        let output = ""; %>
+        <h2>Welcome, <%=user%>!</h2>
+        <% switch (parseInt(rating)) { 
+          case 1: 
+            output = ":)";
+            break;
+          case 2:
+            output = ":|";
+            break;
+          case 3:
+            output = ":(";
+            break;
+          default: 
+            output = "o.O";
+        }%>
+        <p><%=output%></p>
+      <%}%>
+       
+
+    </main>
+    <footer>
+      <address>&copy; 2023 Wendi Jollymore</address>
+    </footer>
+  </body>
+</html>

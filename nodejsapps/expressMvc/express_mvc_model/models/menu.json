@@ -1,0 +1,37 @@
+{
+    "Sunday": {
+        "Breakfast": "eggs, bacon/sausage, toast, juice, fruit",
+        "Lunch": "sandwiches, fruit, carrots/celery",
+        "Dinner": "roast chicken, salad, bread, potatoes, cookies"
+    },
+    "Monday": {
+        "Breakfast": "cereal, milk, juice, fruit",
+        "Lunch": "grilled cheese, tomato soup, fruit",
+        "Dinner": "chickpea pesto salad, bread, pound cake"
+    },
+    "Tuesday": {
+        "Breakfast": "porridge, milk, juice, fruit",
+        "Lunch": "sandwiches, fruit, tomato cucumber salad",
+        "Dinner": "spaghetti, salad, bread, tiramisu"
+    },
+    "Wednesday": {
+        "Breakfast": "cereal, milk, juice, fruit",
+        "Lunch": "tuna salad, crackers, raw vegetables, fruit",
+        "Dinner": "beef bulgogi, rice, mango rice pudding"
+    },
+    "Thursday": {
+        "breakfast": "porridge, milk, juice, fruit",
+        "lunch": "sandwiches, fruit, carrots/celery",
+        "dinner": "chana masala, palak paneer, sabji, rice, gulab jamun"
+    },
+    "Friday": {
+        "Breakfast": "cereal, milk, juice, fruit",
+        "Lunch": "grilled cheese, tomato soup, fruit",
+        "Dinner": "grilled fish, vegetables, brown rice, nanaimo bars"
+    },
+    "Saturday": {
+        "Breakfast": "eggs, bacon/sausage, toast, juice, fruit",
+        "Lunch": "build-your-own poke bowl, vegetables, fruit",
+        "Dinner": "vegetarian or meat pizza, salad, cookies"
+    }
+}
