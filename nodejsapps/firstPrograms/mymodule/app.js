@@ -14,7 +14,7 @@ http.createServer((req, res) => {
         res.write(`<p>${chat.hi}</p>
         <p>${chat.conversation.greet("Kitty")}<br>
         ${chat.conversation.give(2)}</p>
-        <p>${chat.bye()}`);
+        <p>${chat.bye()}</p>`);
 
         res.end();
     } else {
