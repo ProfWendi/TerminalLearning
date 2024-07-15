@@ -12,7 +12,11 @@
             <h2>Chinese Year Zodiac</h2>
         </header>
 
-        <form action="./getyear">
+        <!-- assumes that /zodiac is the project directory and 
+         also that Base Application URL is set to /zodiac, 
+         so when you test it on the server, you would include 
+         /zodiac in your request URL -->
+        <form action="./zodiac/getyear">
           <p><label for="year">Enter Year:
             <input type="number" min="1" max="4000" value="2023"
               name="year" id="year">
