@@ -19,7 +19,7 @@ http.createServer((req, res) => {
         res.end();
     } else {
         res.write("<h1>Not Found</h1>");
-        res.status = 404;
+        res.statusCode = 404;
         res.end();
     }
 })
