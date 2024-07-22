@@ -1,10 +1,11 @@
 "use strict";
 
 const port = 3000,
-  http = require("http"),
-  fs = require("fs"); 
+    http = require("http"),
+    fs = require("fs");
 
-  const customReadFile = (path, res) => {
+// reads in a file and sends it in the response body
+const customReadFile = (path, res) => {
 
     // if the path/file exists
     if (fs.existsSync(path)) {
@@ -23,8 +24,9 @@ const port = 3000,
     } else {  // file doesn't exist: 404
         sendErrorResponse(res, path);
     }
-};  
+};
 
+// sends an error response
 const sendErrorResponse = (res, path) => {
     res.writeHead(404, {
         "Content-Type": "text/html"
@@ -34,43 +36,49 @@ const sendErrorResponse = (res, path) => {
 };
 
 http.createServer((req, res) => {
-    
+
     let contentType = ""; // will be the content type of the response
     let path = "";  // will be the path of the actual file to send back
 
     // get just the file name from the request URL
     let fileName = req.url.split("/").pop();
 
-    // if it's an .html file (html files are in the /views directory)
-    if (req.url.indexOf(".html") !== -1) {
+    // deal with favicon.ico, feel free to replace with your own icon
+    if (req.url.indexOf("ico") >= 0) {
+        contentType = "image/x-icon";
+        path = `./public/${fileName}`;
+
+        // if it's an .html file (html files are in the /views directory)
+    } else if (req.url.indexOf(".html") !== -1) {
         contentType = "text/html";
         path = `./views/${fileName}`;
 
-    // if it's a css file (css files are in the /public directory)
+        // if it's a css file (css files are in the /public directory)
     } else if (req.url.indexOf(".css") !== -1) {
         contentType = "text/css";
-        path =  `./public/css/${fileName}`;
+        path = `./public/css/${fileName}`;
 
-    // if it's a .jpg image file (images are in the /public directory)
+        // if it's a .jpg image file (images are in the /public directory)
     } else if (req.url.indexOf(".jpg") !== -1) {
         contentType = "image/jpg";
-        path =  `./public/images/${fileName}`;
-    } 
+        path = `./public/images/${fileName}`;
+    }
 
     // for debugging
-    console.log(contentType);
-    console.log(path);
-		console.log(fileName);
+    console.log("req url: " + req.url);
+    console.log("content type: " + contentType);
+    console.log("path: " + path);
+    console.log("file name: " + fileName);
 
     // if contentType wasn't set, we didn't handle this type 
     // of file, so make this a file not found response
     if (contentType === "") {
         sendErrorResponse(res, path);
 
-    // if we did get a content type, everything was great, 
-    // so go ahead and read the requested file and send it 
-    // to the client in the response body with 200 OK
-    } else {  
+        // if we did get a content type, everything was great, 
+        // so go ahead and read the requested file and send it 
+        // to the client in the response body with 200 OK
+    } else {
         res.writeHead(200, {
             "Content-Type": contentType
         });
