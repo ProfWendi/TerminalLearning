@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Circles</title>
+    <title>Circles Exercise</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">	
   </head>
 
   <body>
@@ -10,23 +11,24 @@
       <h1>Circles</h1>
     </header>
 
+	<main>
+		<section>
 
-    <section>
+	  
+		</section>
 
+		<section>
+		  <h2>Enter Circle Radius</h2>
+		  <form method="post" action="/mvc_model/circle">
+			<div><label for="rad">Radius:
+			  <input type="text" name="radius" id="rad" pattern="\d+(\.?\d*)">
+			</label></div>
+			<div><button type="submit">Make A Circle</button></div>
+		  </form>
+		</section>
   
-    </section>
-
-    <section>
-      <h2>Enter Circle Radius</h2>
-      <form method="post" action="/mvc_model/circle">
-        <div><label for="rad">Radius:
-          <input type="text" name="radius" id="rad" pattern="\d+(\.?\d*)">
-        </label></div>
-        <div><button type="submit">Make A Circle</button></div>
-      </form>
-    </section>
-  
-    
+    </main>
+	
     <footer>
       <address>&copy; 2023 Your Name Here</address>
     </footer>
