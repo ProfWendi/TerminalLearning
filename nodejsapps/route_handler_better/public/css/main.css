@@ -26,7 +26,7 @@ figure {
 }
 
 figure > img {
-    max-width: 100%;
+    max-width: 50%;
 }
 
 figcaption {
@@ -39,18 +39,18 @@ figcaption {
 
 @media only screen and (min-width: 768px) {
     figure > img {
-        max-width: 700px;
+        max-width: 400px;
     }
     figure {
-        max-width: 750px;
+        max-width: 450px;
     }
 }
 
 @media only screen and (min-width: 1098px) {
     figure > img {
-        max-width: 800px;
+        max-width: 600px;
     }
     figure {
-        max-width: 850px;
+        max-width: 650px;
     }
 }
