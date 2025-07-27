@@ -23,12 +23,12 @@ app.use(session({
     resave: false 
 }));
 
+app.use(express.static(path.join(__dirname, "public")));
+
 // added middleware to do database stuff
 app.use("/countries", dbController.getCountries);
 // changed endpoint callback to home controller renderCountries
 app.get("/countries", homeController.renderCountries);
-
-app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(app.get("port"), () => {
     console.log(`Server running at port ${app.get("port")}`);
