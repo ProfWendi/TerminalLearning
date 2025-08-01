@@ -19,6 +19,10 @@ app.use(
   })
 );
 
+// if root of project is requested, load the static index.html page
+app.use("/zodiac", express.static(path.join(__dirname, "public"),
+    {index: "index.html"}));
+
 // before processing the form submission, 
 // get the year entered by the user
 app.use("/zodiac/getyear", animalController.getAnimal);

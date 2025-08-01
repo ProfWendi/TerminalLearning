@@ -1,0 +1,14 @@
+html, body {
+    font: 16px Helvetica,Arial,sans-serif;
+}
+
+header, footer, main, form {
+    border: .2em solid #903;
+    border-radius: 5px;
+    margin: .25em;
+    padding: .5em;
+}
+
+header, footer {
+    background-color: #ffe6ee;
+}
