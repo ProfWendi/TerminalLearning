@@ -1,0 +1,22 @@
+[
+    {
+        "path": "visitors.html",
+        "text": "Visitor Information"
+    },
+    {
+        "path": "hiring.html",
+        "text": "Join Our Team"
+    },
+    {
+        "path": "page2",
+        "text": "Secondary Page"
+    },
+    {
+        "path": "about/index.html",
+        "text": "About Us"
+    },
+    {
+        "path": "about/staff/index.html",
+        "text": "Our Staff"
+    }
+]

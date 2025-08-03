@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>ABC Company Main Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <% for (let link of links) {%>
+          <a href="<%=link.path%>"><%=link.text%>
+          </a>
+          <%}%>
+      </nav>
+      <h1>ABC Company</h1>
+      <h2>Main Page</h2>
+    </header>
+
+    <main>
+      <h2>Welcome to ABC Company</h2>
+      
+    </main>
+
+    <footer>
+      <address>&copy; 2023 Firstname Lastname</address>
+    </footer>
+  </body>
+
+</html>

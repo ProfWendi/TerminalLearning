@@ -1,0 +1,53 @@
+:root {
+    font: 16px Helvetica,Arial,sans-serif;
+    --shadow: #666;
+    --background: #e0e0eb;
+    --main: #666699;
+    --text: #47476b;
+}
+
+header, footer, main {
+    margin: .5em;
+    padding: .25em;
+}
+
+header, footer, main {
+    border: .2em solid var(--main);
+}
+
+header, footer {
+    background: var(--background);
+    box-shadow: 5px 5px 4px var(--shadow);
+}
+
+header > nav {
+    margin: .5em 0px;
+    padding: .25em;
+}
+
+header > nav > a {
+    display: block;
+    font-size: 1.2em;
+    margin: .5em;
+    padding: .5em;
+    text-decoration: none;
+}
+
+header > nav > a:hover {
+    background-color: var(--text);
+    color: white;
+}
+
+main {
+    text-align: center;
+}
+
+h2 {
+    color: var(--text);
+}
+
+@media only screen and (min-width: 768px) {
+    header > nav > a {
+        display: inline;
+    }
+}
