@@ -2,15 +2,18 @@
 
 const express = require("express"),
     app = express(),
-    animalController = require("./controllers/animalController"),
-    homeController = require("./controllers/homeController");
+    path = require("path"),
+    animalController = require(__dirname, "controllers", "animalController"),
+    homeController = require(__dirname, "controllers", "homeController");
 
 app.set("port", process.env.PORT || 3000);
 app.set("view engine", "ejs");
 
-// route get requests to index page
-app.get("/zodiac/index", homeController.renderIndex);
 
+// if root of project is requested, load the static index.html page
+app.use("/zodiac", express.static(path.join(__dirname, "public"),
+    {index: "index.html"}));
+    
 // put any query string from the request body 
 // into the req.body object
 app.use(
@@ -18,10 +21,6 @@ app.use(
     extended: false
   })
 );
-
-// if root of project is requested, load the static index.html page
-app.use("/zodiac", express.static(path.join(__dirname, "public"),
-    {index: "index.html"}));
 
 // before processing the form submission, 
 // get the year entered by the user
