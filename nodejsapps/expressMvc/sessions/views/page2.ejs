@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Second Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <h1>Second Page</h1>
+    
+    <% if (locals.session && session.username) { %>
+      <h2>Welcome, <%= session.username %>!</h2>
+    <% } else { %>
+      <h2>Welcome!</h2>
+    <% } %>
+  </header>
+
+    <p><a href="/sessions">Back to Main Page</a></p>
+  </main>
+
+  <footer>
+    <address>&copy; 2023 Wendi Jollymore</address>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+            
+<head>
+  <meta charset="utf-8">
+  <title>Index Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+            
+  <body>
+    <header>
+      <h1>Index Page</h1>
+                
+      <% if (locals.session && session.username) { %>
+        <h2>Welcome, <%= session.username %>!</h2>
+      <% } else { %>
+        <h2>Welcome!</h2>
+      <% } %>
+    </header>
+            
+    <main>
+               
+      <% if (!locals.session || !session.username) { %>
+        <form action="/sessions/getuser" method="post">
+          <div><label for="name">Name:
+          <input type="text" id="name" name="username" required>
+          </label></div>
+          <div><input type="submit" value="Submit"></div>
+        </form>
+      <% } else {%>
+        <form action="/sessions/logout" method="POST">
+          <div><button type="submit">Log Out</button></div>
+        </form>
+        <%}%>
+            
+      <p><a href="/sessions/page2">Page 2</a></p>
+    </main>
+            
+    <footer>
+      <address>&copy; 2023 Wendi Jollymore</address>
+    </footer>
+  </body>
+            
+</html>
